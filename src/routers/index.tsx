@@ -71,14 +71,14 @@ export const pages: Page[] = [
     component: ListingExperiencesDetailPage,
   },
   //
-  { path: "/listing-car", component: ListingCarPage },
-  { path: "/listing-car-map", component: ListingCarMapPage },
-  { path: "/listing-car-detail", component: ListingCarDetailPage },
+  // { path: "/listing-car", component: ListingCarPage },
+  // { path: "/listing-car-map", component: ListingCarMapPage },
+  // { path: "/listing-car-detail", component: ListingCarDetailPage },
   //
   { path: "/listing-real-estate-map", component: ListingRealEstateMapPage },
   { path: "/listing-real-estate", component: ListingRealEstatePage },
   //
-  { path: "/listing-flights", component: ListingFlightsPage },
+  // { path: "/listing-flights", component: ListingFlightsPage },
   //
   { path: "/checkout", component: CheckOutPage },
   { path: "/pay-done", component: PayPage },
