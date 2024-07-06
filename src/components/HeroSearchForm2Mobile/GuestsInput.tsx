@@ -69,26 +69,26 @@ const GuestsInput: FC<GuestsInputProps> = ({
         defaultValue={guestAdultsInputValue}
         onChange={(value) => handleChangeData(value, "guestAdults")}
         max={20}
-        label="Adults"
-        desc="Ages 13 or above"
+        label="Beds Count"
+        desc="Number of bedrooms"
       />
       <NcInputNumber
         className="w-full mt-6"
         defaultValue={guestChildrenInputValue}
         onChange={(value) => handleChangeData(value, "guestChildren")}
         max={20}
-        label="Children"
-        desc="Ages 2–12"
+        label="Bath Count"
+        desc="Number of bathrooms"
       />
 
-      <NcInputNumber
+      {/* <NcInputNumber
         className="w-full mt-6"
         defaultValue={guestInfantsInputValue}
         onChange={(value) => handleChangeData(value, "guestInfants")}
         max={20}
         label="Infants"
         desc="Ages 0–2"
-      />
+      /> */}
     </div>
   );
 };

@@ -24,12 +24,12 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
   const [showHeroSearch, setShowHeroSearch] =
     useState<StaySearchFormFields | null>();
   //
-  const [currentTab, setCurrentTab] = useState<SearchTab>("Stays");
+  const [currentTab, setCurrentTab] = useState<SearchTab>("Rental House");
 
   //
   useOutsideAlerter(headerInnerRef, () => {
     setShowHeroSearch(null);
-    setCurrentTab("Stays");
+    setCurrentTab("Rental House");
   });
 
   let location = useLocation();
@@ -115,7 +115,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
           <span className="h-5 w-[1px] bg-neutral-300 dark:bg-neutral-700"></span>
           <span
             onClick={() => {
-              setShowHeroSearch("guests");
+              setShowHeroSearch("beds");
             }}
             className="block px-4 cursor-pointer font-normal py-3"
           >
@@ -157,7 +157,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
           ${showHeroSearch ? "duration-75" : ""} 
           ${
             showHeroSearch
-              ? currentTab === "Cars" || currentTab === "Flights"
+              ? currentTab === "Rental House" || currentTab === "Rental House"
                 ? "scale-y-[4.4]"
                 : "scale-y-[3.4]"
               : ""
