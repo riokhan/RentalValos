@@ -29,10 +29,10 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
             <div className="pt-5  sm:pb-5 sm:px-5 space-y-3">
               <div>
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                  Hotel room in Tokyo, Jappan
+                  Room in Tokyo, Jappan
                 </span>
                 <span className="text-base sm:text-lg font-medium mt-1 block">
-                  The Lounge & Bar
+                504 Victor Street Saddle Brook
                 </span>
               </div>
               <span className="block  text-sm text-neutral-500 dark:text-neutral-400">

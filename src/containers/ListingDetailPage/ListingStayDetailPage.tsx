@@ -630,11 +630,11 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Things to know</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        {/* <h2 className="text-2xl font-semibold">Things to know</h2> */}
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
 
         {/* CONTENT */}
-        <div>
+        {/* <div>
           <h4 className="text-lg font-semibold">Cancellation policy</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
             Refund 50% of the booking value when customers cancel the room
@@ -643,7 +643,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             Then, cancel the room 14 days before the check-in time, get a 50%
             refund of the total amount paid (minus the service fee).
           </span>
-        </div>
+        </div> */}
         {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
 
         {/* CONTENT */}
@@ -684,8 +684,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSectionSidebar__wrap shadow-xl" style={{width: "385px"}} >
         {/* PRICE */}
-        <div className="flex justify-between">
-          <span className="text-3xl font-semibold">
+        <div className="flex justify-center">
+          <span className="text-2xl font-semibold">
             Contact Property
            
           </span>
