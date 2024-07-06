@@ -51,7 +51,7 @@ const MobileFooterSticky = () => {
               sizeClass="px-5 sm:px-7 py-3 !rounded-2xl"
               onClick={openModal}
             >
-              Reserve
+              Book
             </ButtonPrimary>
           )}
         />
