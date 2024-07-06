@@ -19,7 +19,7 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
 
         {/* ------------------------ */}
         <div className="space-y-6">
-          <h3 className="text-2xl font-semibold">Your booking</h3>
+          <h3 className="text-2xl font-semibold">Your booking is confirmed</h3>
           <div className="flex flex-col sm:flex-row sm:items-center">
             <div className="flex-shrink-0 w-full sm:w-40">
               <div className=" aspect-w-4 aspect-h-3 sm:aspect-h-4 rounded-2xl overflow-hidden">
@@ -29,10 +29,10 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
             <div className="pt-5  sm:pb-5 sm:px-5 space-y-3">
               <div>
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                  Room in Tokyo, Jappan
+                Room in  New Jersey, United States 
                 </span>
                 <span className="text-base sm:text-lg font-medium mt-1 block">
-                504 Victor Street Saddle Brook
+                Victor Street Saddle Brook
                 </span>
               </div>
               <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
@@ -83,8 +83,8 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
               </svg>
 
               <div className="flex flex-col">
-                <span className="text-sm text-neutral-400">Guests</span>
-                <span className="mt-1.5 text-lg font-semibold">3 Guests</span>
+                <span className="text-sm text-neutral-400">Members</span>
+                <span className="mt-1.5 text-lg font-semibold">3 Members</span>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
             <div className="flex text-neutral-6000 dark:text-neutral-300">
               <span className="flex-1">Date</span>
               <span className="flex-1 font-medium text-neutral-900 dark:text-neutral-100">
-                12 Aug, 2021
+                12 Aug, 2024
               </span>
             </div>
             <div className="flex text-neutral-6000 dark:text-neutral-300">
@@ -114,9 +114,9 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
             </div>
             <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
               <span className="flex-1">Payment method</span>
-              <span className="flex-1 font-medium text-neutral-900 dark:text-neutral-100">
+              {/* <span className="flex-1 font-medium text-neutral-900 dark:text-neutral-100">
                 Credit card
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
