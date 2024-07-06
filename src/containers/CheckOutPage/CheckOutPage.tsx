@@ -44,10 +44,10 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
           <div className="py-5 sm:px-5 space-y-3">
             <div>
               <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                Hotel room in Tokyo, Jappan
+                Room in  New Jersey, United States 
               </span>
               <span className="text-base font-medium mt-1 block">
-                The Lounge & Bar
+              Victor Street Saddle Brook
               </span>
             </div>
             <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
@@ -57,7 +57,7 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
             <StartRating />
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
+        {/* <div className="flex flex-col space-y-4">
           <h3 className="text-2xl font-semibold">Price detail</h3>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
             <span>$19 x 3 day</span>
@@ -73,7 +73,7 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
             <span>Total</span>
             <span>$57</span>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   };
@@ -87,7 +87,7 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
         <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
         <div>
           <div>
-            <h3 className="text-2xl font-semibold">Your trip</h3>
+            <h3 className="text-2xl font-semibold">Pre-Booking </h3>
             <NcModal
               renderTrigger={(openModal) => (
                 <span
@@ -132,13 +132,13 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
                   className="text-left flex-1 p-5 flex justify-between space-x-5"
                 >
                   <div className="flex flex-col">
-                    <span className="text-sm text-neutral-400">Guests</span>
+                    <span className="text-sm text-neutral-400">Roommates</span>
                     <span className="mt-1.5 text-lg font-semibold">
                       <span className="line-clamp-1">
                         {`${
                           (guests.guestAdults || 0) +
                           (guests.guestChildren || 0)
-                        } Guests, ${guests.guestInfants || 0} Infants`}
+                        } Members, ${guests.guestInfants || 0} Infants`}
                       </span>
                     </span>
                   </div>
@@ -150,11 +150,28 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold">Pay with</h3>
+          <h3 className="text-2xl font-semibold">Enter details</h3>
           <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 my-5"></div>
 
           <div className="mt-6">
-            <Tab.Group>
+          <div className="space-y-1">
+                    <Label>Email </Label>
+                    <Input type="email" defaultValue="example@gmail.com" />
+                  </div>
+                  <div className="space-y-1">
+                    <Label>Password </Label>
+                    <Input type="password" defaultValue="***" />
+                  </div>
+                  <div className="space-y-1">
+                    <Label>Write Message</Label>
+                    <Textarea placeholder="..." />
+                    <span className="text-sm text-neutral-500 block">
+                      Write a few sentences about yourself.
+                    </span>
+                  </div>
+
+            
+            {/* <Tab.Group>
               <Tab.List className="flex my-5">
                 <Tab as={Fragment}>
                   {({ selected }) => (
@@ -232,9 +249,9 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
-            </Tab.Group>
+            </Tab.Group> */}
             <div className="pt-8">
-              <ButtonPrimary href={"/pay-done"}>Confirm and pay</ButtonPrimary>
+              <ButtonPrimary href={"/pay-done"}>Confirm and Next</ButtonPrimary>
             </div>
           </div>
         </div>

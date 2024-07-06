@@ -9,6 +9,7 @@ import { DateRage } from "components/HeroSearchForm/StaySearchForm";
 import StartRating from "components/StartRating/StartRating";
 import GoogleMapReact from "google-map-react";
 import useWindowSize from "hooks/useWindowResize";
+import Checkbox from "shared/Checkbox/Checkbox";
 import moment from "moment";
 import {
   DayPickerRangeController,
@@ -382,7 +383,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap overflow-hidden">
         {/* HEADING */}
         <div>
-          <h2 className="text-2xl font-semibold">Availability</h2>
+          <h2 className="text-2xl font-semibold">Facilities</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
             Prices may increase on weekends or holidays
           </span>
@@ -412,24 +413,31 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel className="">
-                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                <div className="mt-8 grid grid-cols-1 ">
                   {/* {DEMO_STAY_LISTINGS.filter((_, i) => i < 4).map((stay) => (
                     <StayCard key={stay.id} data={stay} />
                   ))} */}
-                   <span>Property Type: Apartment</span>
+                   <span className="text-3sm"></span>
+                <b className="mb-4"> Property Type / Style</b>
+               <li>   Property Type: Apartment</li> 
                 </div>
                 {/* <div className="flex mt-11 justify-center items-center">
                   <ButtonSecondary>Show me more</ButtonSecondary>
                 </div> */}
               </Tab.Panel>
               <Tab.Panel className="">
-                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2">
                   {/* {DEMO_EXPERIENCES_LISTINGS.filter((_, i) => i < 4).map(
                     (stay) => (
                       <ExperiencesCard key={stay.id} data={stay} />
                     )
                   )} */}
-                  <span>Property Type: Apartment</span>
+               <b className="mb-4">Rental</b>
+               <br /> 
+               <li className="mb-4">   Rent Includes: Garbage</li> 
+               <li className="mb-4"> Cats, small dogs, large dogs allowed</li>
+
+             
                 </div>
                 {/* <div className="flex mt-11 justify-center items-center">
                   <ButtonSecondary>Show me more</ButtonSecondary>
@@ -437,9 +445,15 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               </Tab.Panel>
               <Tab.Panel className="">
                 <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
-                  <div>
-                    <span>hi</span>
-                  </div>
+                 
+                   
+                    <b className="mb-4">Heating & Cooling</b>
+                    <br />
+
+<li className="mb-4">Air Conditioning</li>
+<li className="mb-4">Heating Fuel: Gas</li>
+
+                  
                 </div>
                 {/* <div className="flex mt-11 justify-center items-center">
                   <ButtonSecondary>Show me more</ButtonSecondary>
@@ -457,7 +471,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Host Information</h2>
+        <h2 className="text-2xl font-semibold">About 55 Brighton Avenue</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
 
         {/* host */}
@@ -630,11 +644,11 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Things to know</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        {/* <h2 className="text-2xl font-semibold">Things to know</h2> */}
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
 
         {/* CONTENT */}
-        <div>
+        {/* <div>
           <h4 className="text-lg font-semibold">Cancellation policy</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
             Refund 50% of the booking value when customers cancel the room
@@ -643,7 +657,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             Then, cancel the room 14 days before the check-in time, get a 50%
             refund of the total amount paid (minus the service fee).
           </span>
-        </div>
+        </div> */}
         {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
 
         {/* CONTENT */}
@@ -660,11 +674,12 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             </div>
           </div>
         </div> */}
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        
 
         {/* CONTENT */}
         <div>
           <h4 className="text-lg font-semibold">Special Note</h4>
+          <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
           <div className="prose sm:prose">
             <ul className="mt-3 text-neutral-500 dark:text-neutral-400 space-y-2">
               <li>
@@ -684,8 +699,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSectionSidebar__wrap shadow-xl" style={{width: "385px"}} >
         {/* PRICE */}
-        <div className="flex justify-between">
-          <span className="text-3xl font-semibold">
+        <div className="flex justify-center">
+          <span className="text-2xl font-semibold">
             Contact Property
            
           </span>
@@ -697,35 +712,20 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             <span style={{textAlign: "center"}}> Contact Property</span>
             
           </div> */}
-          <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span style={{textAlign: "center"}}> Learn more, take a tour, and get one step closer to your new home.</span>
-            
+          <div className="flex justify-center text-neutral-6000 dark:text-neutral-300">
+            <span> Learn more, take a tour, and get one step closer to your new home.
+            </span>
           </div>
+          <ButtonPrimary>
+            +123 4567 890
+          </ButtonPrimary>
+          <ButtonSecondary  className="">
+            info@valoteam.com
+          </ButtonSecondary>
           </div>
 
         {/* FORM */}
-        <form className="flex flex-col border border-neutral-200 dark:border-neutral-700 rounded-3xl ">
-        
-          <StayDatesRangeInput
-            wrapClassName="divide-x divide-neutral-200 dark:divide-neutral-700 !grid-cols-1 sm:!grid-cols-2"
-            onChange={(date) => setSelectedDate(date)}
-            fieldClassName="p-3"
-            defaultValue={selectedDate}
-            anchorDirection={"right"}
-            className="nc-ListingStayDetailPage__stayDatesRangeInput flex-1"
-          />
-          <div className="w-full border-b border-neutral-200 dark:border-neutral-700"></div>
-          {/* <GuestsInput
-            className="nc-ListingStayDetailPage__guestsInput flex-1"
-            fieldClassName="p-3"
-            defaultValue={{
-              guestAdults: 1,
-              guestChildren: 2,
-              guestInfants: 0,
-            }}
-            hasButtonSubmit={false}
-          /> */}
-        </form>
+      
 
         {/* SUM */}
         <div className="flex flex-col space-y-4">
@@ -734,19 +734,66 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             Learn more, take a tour, and get one step closer to your new home.</span>
             
           </div> */}
+         
+          {/* <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
+            <span>Service charge</span>
+            <span>$0</span>
+          </div> */}
+          <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
+          <div className="flex justify-center">
+          <span className="text-2xl font-semibold">
+            Request Tour
+           
+          </span>
+          </div>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
             
             <span>Let the property know when you're available, and they will contact you to arrange a tour.</span>
           </div>
-          <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>Service charge</span>
-            <span>$0</span>
-          </div>
-          <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
-          <div className="flex justify-between font-semibold">
+
+          <form className="flex flex-col border border-neutral-200 dark:border-neutral-700 rounded-3xl ">
+        
+        <StayDatesRangeInput
+          wrapClassName="divide-x divide-neutral-200 dark:divide-neutral-700 !grid-cols-1 sm:!grid-cols-2"
+          onChange={(date) => setSelectedDate(date)}
+          fieldClassName="p-3"
+          defaultValue={selectedDate}
+          anchorDirection={"right"}
+          className="nc-ListingStayDetailPage__stayDatesRangeInput flex-1"
+        />
+        <div className="flex justify-center gap-2 mb-5" >
+        <Checkbox
+                className="text-xs xl:text-sm text-neutral-800"
+                name="xx"
+                label="Morning"
+              />
+              <Checkbox
+                className="text-xs xl:text-sm text-neutral-800"
+                name="xx"
+                label="Afternoon"
+              />
+              <Checkbox
+                className="text-xs xl:text-sm text-neutral-800"
+                name="xx"
+                label="Evening"
+              />
+              </div>
+        {/* <div className="w-full border-b border-neutral-200 dark:border-neutral-700"></div> */}
+        {/* <GuestsInput
+          className="nc-ListingStayDetailPage__guestsInput flex-1"
+          fieldClassName="p-3"
+          defaultValue={{
+            guestAdults: 1,
+            guestChildren: 2,
+            guestInfants: 0,
+          }}
+          hasButtonSubmit={false}
+        /> */}
+      </form>
+          {/* <div className="flex justify-between font-semibold">
             <span>Total</span>
             <span>$199</span>
-          </div>
+          </div> */}
         </div>
 
         {/* SUBMIT */}
