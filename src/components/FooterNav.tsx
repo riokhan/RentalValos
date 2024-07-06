@@ -3,6 +3,7 @@ import {
   MagnifyingGlassIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import { HomeIcon, HomeModernIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { PathName } from "routers/types";
@@ -19,14 +20,14 @@ interface NavItem {
 
 const NAV: NavItem[] = [
   {
+    name: "Home",
+    link: "/",
+    icon: HomeIcon,
+  },
+  {
     name: "Explore",
     link: "/",
     icon: MagnifyingGlassIcon,
-  },
-  {
-    name: "Wishlists",
-    link: "/account-savelists",
-    icon: HeartIcon,
   },
   {
     name: "Log in",
