@@ -58,7 +58,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
             <i className="las la-bed text-lg"></i>
           </span>
           <span className="text-xs text-neutral-500 dark:text-neutral-400">
-            6 beds
+            10 beds
           </span>
         </div>
 
@@ -68,7 +68,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
             <i className="las la-bath text-lg"></i>
           </span>
           <span className="text-xs text-neutral-500 dark:text-neutral-400">
-            3 baths
+            6 baths
           </span>
         </div>
 
@@ -78,7 +78,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
             <i className="las la-expand-arrows-alt text-lg"></i>
           </span>
           <span className="text-xs text-neutral-500 dark:text-neutral-400">
-            1200 Sq. Fit
+            1500 Sq. Fit
           </span>
         </div>
       </div>
@@ -94,7 +94,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
               name={
                 <div className="flex items-center">
                   <i className="text-sm las la-share-alt"></i>
-                  <span className="ml-1">4 Network</span>
+                  <span className="ml-1">5 Network</span>
                 </div>
               }
             />
