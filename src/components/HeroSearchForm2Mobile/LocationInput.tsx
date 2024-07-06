@@ -13,7 +13,7 @@ const LocationInput: FC<Props> = ({
   onChange = () => {},
   className = "",
   defaultValue = "United States",
-  headingText = "Where to?",
+  headingText = "Location",
 }) => {
   const [value, setValue] = useState("");
   const containerRef = useRef(null);
@@ -41,7 +41,7 @@ const LocationInput: FC<Props> = ({
     return (
       <>
         <p className="block font-semibold text-base">
-          {heading || "Destinations"}
+          {heading || "Destination"}
         </p>
         <div className="mt-3">
           {items.map((item) => {

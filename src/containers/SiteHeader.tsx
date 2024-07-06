@@ -10,7 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import { PathName } from "routers/types";
 
-export type SiteHeaders = "Header 1" | "Header 2" | "Header 3";
+export type SiteHeaders = "Header 3" | "Header 2" | "Header 1";
 
 interface HomePageItem {
   name: string;
@@ -34,9 +34,9 @@ const SiteHeader = () => {
   const anchorRef = React.useRef<HTMLDivElement>(null);
 
   let [headers] = React.useState<SiteHeaders[]>([
-    "Header 1",
-    "Header 2",
     "Header 3",
+    "Header 2",
+    "Header 1",
   ]);
 
   let [homePages] = React.useState<HomePageItem[]>([
@@ -54,7 +54,7 @@ const SiteHeader = () => {
     },
   ]);
   const [headerSelected, setHeaderSelected] =
-    React.useState<SiteHeaders>("Header 1");
+    React.useState<SiteHeaders>("Header 3");
 
   const [isTopOfPage, setIsTopOfPage] = React.useState(window.pageYOffset < 5);
   const location = useLocation();

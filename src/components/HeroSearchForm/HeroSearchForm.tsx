@@ -69,7 +69,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
       data-nc-id="HeroSearchForm"
     >
       {/* {renderTab()} */}
-      {renderForm()}
+      {/* {renderForm()} */}
     </div>
   );
 };

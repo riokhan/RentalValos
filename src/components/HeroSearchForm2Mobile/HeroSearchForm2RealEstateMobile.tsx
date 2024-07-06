@@ -30,7 +30,7 @@ const HeroSearchForm2RealEstateMobile = () => {
         <MagnifyingGlassIcon className="flex-shrink-0 w-5 h-5" />
 
         <div className="ml-3 flex-1 text-left overflow-hidden">
-          <span className="block font-medium text-sm">Where to?</span>
+          <span className="block font-medium text-sm">Location</span>
           <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 line-clamp-1">
             Anywhere • Any week
           </span>
