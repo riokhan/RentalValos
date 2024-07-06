@@ -7,7 +7,7 @@ import StayDatesRangeInput from "./StayDatesRangeInput";
 const StaySearchForm = () => {
   //
   const [fieldNameShow, setFieldNameShow] = useState<
-    "location" | "dates" | "guests"
+    "location" | "dates" | "beds"
   >("location");
   //
   const [locationInputTo, setLocationInputTo] = useState("");
@@ -91,12 +91,12 @@ const StaySearchForm = () => {
   };
 
   const renderInputGuests = () => {
-    const isActive = fieldNameShow === "guests";
+    const isActive = fieldNameShow === "beds";
     let guestSelected = "";
     if (guestInput.guestAdults || guestInput.guestChildren) {
       const guest =
         (guestInput.guestAdults || 0) + (guestInput.guestChildren || 0);
-      guestSelected += `${guest} guests`;
+      guestSelected += `${guest} beds`;
     }
 
     if (guestInput.guestInfants) {
@@ -114,7 +114,7 @@ const StaySearchForm = () => {
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
-            onClick={() => setFieldNameShow("guests")}
+            onClick={() => setFieldNameShow("beds")}
           >
             <span className="text-neutral-400">Who</span>
             <span>{guestSelected || `Add guests`}</span>

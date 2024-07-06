@@ -17,7 +17,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
   currentTab = "Stays",
   currentPage,
 }) => {
-  const tabs: SearchTab[] = ["Stays", "Experiences", "Cars", "Flights"];
+  const tabs: SearchTab[] = ["Stays"];
   const [tabActive, setTabActive] = useState<SearchTab>(currentTab);
 
   const renderTab = () => {
@@ -51,12 +51,12 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
     switch (tabActive) {
       case "Stays":
         return <StaySearchForm haveDefaultValue={isArchivePage} />;
-      case "Experiences":
-        return <ExperiencesSearchForm haveDefaultValue={isArchivePage} />;
-      case "Cars":
-        return <RentalCarSearchForm haveDefaultValue={isArchivePage} />;
-      case "Flights":
-        return <FlightSearchForm haveDefaultValue={isArchivePage} />;
+      // case "Experiences":
+      //   return <ExperiencesSearchForm haveDefaultValue={isArchivePage} />;
+      // case "Cars":
+      //   return <RentalCarSearchForm haveDefaultValue={isArchivePage} />;
+      // case "Flights":
+      //   return <FlightSearchForm haveDefaultValue={isArchivePage} />;
 
       default:
         return null;
@@ -68,7 +68,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
       className={`nc-HeroSearchForm w-full max-w-6xl py-5 lg:py-0 ${className}`}
       data-nc-id="HeroSearchForm"
     >
-      {renderTab()}
+      {/* {renderTab()} */}
       {renderForm()}
     </div>
   );

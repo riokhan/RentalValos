@@ -79,10 +79,10 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
           <span className="block xl:text-lg font-semibold">
             {stateDate.startDate
               ? stateDate.startDate.format("DD MMM")
-              : "Check in"}
+              : "Move In"}
           </span>
           <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
-            {stateDate.startDate ? "Check in" : `Add date`}
+            {stateDate.startDate ? "Move In" : `Add date`}
           </span>
         </div>
       </div>
@@ -165,12 +165,13 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
         />
       </div>
 
-      <div className={`flex-1 grid grid-cols-2 relative ${wrapClassName}`}>
+      <div className={`flex-1 grid grid-cols-1 relative ${wrapClassName}`}>
         {renderInputCheckInDate()}
-        {renderInputCheckOutDate()}
+        {/* {renderInputCheckOutDate()} */}
       </div>
     </div>
   );
+  
 };
 
 export default StayDatesRangeInput;
