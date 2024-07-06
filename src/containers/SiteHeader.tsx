@@ -36,7 +36,7 @@ const SiteHeader = () => {
   let [headers] = React.useState<SiteHeaders[]>([
     "Header 3",
     "Header 2",
-    "Header 1",
+    "Header 3",
   ]);
 
   let [homePages] = React.useState<HomePageItem[]>([
@@ -199,7 +199,8 @@ const SiteHeader = () => {
     }
     switch (headerSelected) {
       case "Header 1":
-        return <Header className={headerClassName} navType="MainNav1" />;
+        return <Header3 className={headerClassName} />;
+        // <Header className={headerClassName} navType="MainNav1" />;
       case "Header 2":
         return <Header className={headerClassName} navType="MainNav2" />;
       case "Header 3":
