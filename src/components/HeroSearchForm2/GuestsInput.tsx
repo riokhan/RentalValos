@@ -88,10 +88,10 @@ const GuestsInput: FC<GuestsInputProps> = ({
         >
           <div className="flex-1 text-left">
             <span className="block font-semibold">
-              {totalGuests || ""} Guests
+              {totalGuests || ""} Total
             </span>
             <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
-              {totalGuests ? "Guests" : "Add guests"}
+              {totalGuests ? "Beds & Bath" : "Select"}
             </span>
           </div>
         </div>
@@ -118,26 +118,26 @@ const GuestsInput: FC<GuestsInputProps> = ({
             onChange={(value) => handleChangeData(value, "guestAdults")}
             max={10}
             min={1}
-            label="Adults"
-            desc="Ages 13 or above"
+            label="Beds Count"
+            desc="Number of bedrooms"
           />
           <NcInputNumber
             className="w-full mt-6"
             defaultValue={guestChildrenInputValue}
             onChange={(value) => handleChangeData(value, "guestChildren")}
             max={4}
-            label="Children"
-            desc="Ages 2–12"
+            label="Bath Count"
+            desc="Number of bathrooms"
           />
 
-          <NcInputNumber
+          {/* <NcInputNumber
             className="w-full mt-6"
             defaultValue={guestInfantsInputValue}
             onChange={(value) => handleChangeData(value, "guestInfants")}
             max={4}
             label="Infants"
             desc="Ages 0–2"
-          />
+          /> */}
         </div>
       )}
     </div>
