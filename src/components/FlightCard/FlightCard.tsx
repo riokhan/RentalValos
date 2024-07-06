@@ -34,7 +34,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
                   Monday, August 12 · 10:00
                 </span>
                 <span className=" font-semibold">
-                  Tokyo International Airport (HND)
+                  Washington, D.C. International Airport (HND)
                 </span>
               </div>
               <div className="flex flex-col space-y-1">

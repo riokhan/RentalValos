@@ -23,7 +23,9 @@ const SectionGridFeatureProperty: FC<SectionGridFeaturePropertyProps> = ({
   heading = "Featured Homes for Rent",
   subHeading = "Explore our top rental homes, selected for their quality and amenities.",
   headingIsCenter,
-  tabs = ["Alabama", "Guam", "Paris", "London"],
+
+  tabs = ["New York", "Washington, D.C.", "Paris", "London"],
+
 }) => {
   const renderCard = (stay: StayDataType, index: number) => {
     return <PropertyCardH key={index} className="h-full" data={stay} />;
