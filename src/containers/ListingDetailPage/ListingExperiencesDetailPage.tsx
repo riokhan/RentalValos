@@ -102,7 +102,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Tokyo, Jappan</span>
+            <span className="ml-1"> Washington, D.C., United States</span>
           </span>
         </div>
 

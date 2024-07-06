@@ -36,7 +36,7 @@ const DEMO_DATA = [
   {
     id: 3,
     clientName: "Berta Emili",
-    clientAddress: "Tokyo",
+    clientAddress: "Washington, D.C.",
     content:
       "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
   },
