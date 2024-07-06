@@ -23,19 +23,21 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
         {/* CARDSSSS */}
         <div className="min-h-screen w-full xl:w-[780px] 2xl:w-[880px] flex-shrink-0 xl:px-8 ">
           <Heading2
-            heading="Experiences in Tokyo"
+            heading="Experiences in Washington, D.C."
             subHeading={
               <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-                233 experiences
+                240 experiences
                 <span className="mx-2">·</span>
-                Aug 12 - 18
-                <span className="mx-2">·</span>2 Guests
+                Aug 15 - 20
+                <span className="mx-2">·</span>5 Guests
               </span>
             }
           />
+
           <div className="mb-8 lg:mb-11">
             <TabFilters />
           </div>
+          
           <div className="grid grid-cols-1 gap-8">
             {DEMO_EXPERIENCES.map((item) => (
               <div
@@ -47,6 +49,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
               </div>
             ))}
           </div>
+          
           <div className="flex mt-16 justify-center items-center">
             <Pagination />
           </div>

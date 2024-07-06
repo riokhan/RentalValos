@@ -30,6 +30,16 @@ import SectionSliderNewCategories from "components/SectionSliderNewCategories/Se
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
 import StayDatesRangeInput from "components/HeroSearchForm/StayDatesRangeInput";
 import MobileFooterSticky from "./MobileFooterSticky";
+import {
+  DEMO_CAR_LISTINGS,
+  DEMO_EXPERIENCES_LISTINGS,
+  DEMO_STAY_LISTINGS,
+} from "data/listings";
+import { Tab } from "@headlessui/react";
+import StayCard from "components/StayCard/StayCard";
+import CarCard from "components/CarCard/CarCard";
+
+import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard";
 
 export interface ListingStayDetailPageProps {
   className?: string;
@@ -82,6 +92,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   className = "",
   isPreviewMode,
 }) => {
+  let [categories] = useState(["Property Information", "Rental", "Interior Features"]);
   const [isOpen, setIsOpen] = useState(false);
   const [openFocusIndex, setOpenFocusIndex] = useState(0);
   const [selectedDate, setSelectedDate] = useState<DateRage>({
@@ -127,13 +138,13 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap !space-y-6">
         {/* 1 */}
         <div className="flex justify-between items-center">
-          <Badge name="Wooden house" />
+          <Badge name="For Rent" />
           <LikeSaveBtns />
         </div>
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Beach House in Collingwood
+        504 Victor Street Saddle Brook, New Jersey, 07663 United States
         </h2>
 
         {/* 3 */}
@@ -142,12 +153,12 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Tokyo, Jappan</span>
+            <span className="ml-1"> New Jersey, USA</span>
           </span>
         </div>
 
         {/* 4 */}
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <Avatar hasChecked sizeClass="h-10 w-10" radius="rounded-full" />
           <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
             Hosted by{" "}
@@ -155,7 +166,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               Kevin Francis
             </span>
           </span>
-        </div>
+        </div> */}
 
         {/* 5 */}
         <div className="w-full border-b border-neutral-100 dark:border-neutral-700" />
@@ -165,25 +176,26 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <div className="flex items-center space-x-3 ">
             <i className=" las la-user text-2xl "></i>
             <span className="">
-              6 <span className="hidden sm:inline-block">guests</span>
+              6 <span className="hidden sm:inline-block">People</span>
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className=" las la-bed text-2xl"></i>
             <span className=" ">
-              6 <span className="hidden sm:inline-block">beds</span>
+              2 <span className="hidden sm:inline-block">bedrooms</span>
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className=" las la-bath text-2xl"></i>
             <span className=" ">
-              3 <span className="hidden sm:inline-block">baths</span>
+              3 <span className="hidden sm:inline-block">bathroom</span>
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <i className=" las la-door-open text-2xl"></i>
+          <i className="las la-expand-arrows-alt text-lg"></i>
+            {/* <i className=" las la-door-open text-2xl"></i> */}
             <span className=" ">
-              2 <span className="hidden sm:inline-block">bedrooms</span>
+            640-970  <span className="hidden sm:inline-block">Sqft</span>
             </span>
           </div>
         </div>
@@ -198,9 +210,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div className="text-neutral-6000 dark:text-neutral-300">
           <span>
-            Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides
-            accommodation, an outdoor swimming pool, a bar, a shared lounge, a
-            garden and barbecue facilities. Complimentary WiFi is provided.
+          At The Monroe, coming home feels like you're on vacation everyday. Experience elevated luxury living with condominium quality craftsmanship and resort-like amenities. With so much to do in this ideal location, a vibrant new lifestyle awaits. Embrace it and live life carefree at The Monroe every day. Your road map to Boston starts here.
           </span>
           <br />
           <br />
@@ -208,12 +218,12 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             There is a private bathroom with bidet in all units, along with a
             hairdryer and free toiletries.
           </span>
-          <br /> <br />
+          {/* <br /> <br />
           <span>
             The Symphony 9 Tam Coc offers a terrace. Both a bicycle rental
             service and a car rental service are available at the accommodation,
             while cycling can be enjoyed nearby.
-          </span>
+          </span> */}
         </div>
       </div>
     );
@@ -323,19 +333,19 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     );
   };
 
-  const renderSection4 = () => {
-    return (
-      <div className="listingSection__wrap">
+  // const renderSection4 = () => {
+  //   return (
+      // <div className="listingSection__wrap">
         {/* HEADING */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-semibold">Room Rates </h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
             Prices may increase on weekends or holidays
           </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        </div> */}
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div> */}
         {/* CONTENT */}
-        <div className="flow-root">
+        {/* <div className="flow-root">
           <div className="text-sm sm:text-base text-neutral-6000 dark:text-neutral-300 -mb-4">
             <div className="p-4 bg-neutral-100 dark:bg-neutral-800 flex justify-between items-center space-x-4 rounded-lg">
               <span>Monday - Thursday</span>
@@ -362,10 +372,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               <span>90 nights</span>
             </div>
           </div>
-        </div>
-      </div>
-    );
-  };
+        </div> */}
+      // </div>
+  //   );
+  // };
 
   const renderSectionCheckIndate = () => {
     return (
@@ -381,22 +391,63 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         {/* CONTENT */}
 
         <div className="listingSection__wrap__DayPickerRangeController flow-root">
-          <div className="-mx-4 sm:mx-auto xl:mx-[-22px]">
-            <DayPickerRangeController
-              startDate={selectedDate.startDate}
-              endDate={selectedDate.endDate}
-              onDatesChange={(date) => setSelectedDate(date)}
-              focusedInput={focusedInputSectionCheckDate}
-              onFocusChange={(focusedInput) =>
-                setFocusedInputSectionCheckDate(focusedInput || "startDate")
-              }
-              initialVisibleMonth={null}
-              numberOfMonths={windowSize.width < 1280 ? 1 : 2}
-              daySize={getDaySize()}
-              hideKeyboardShortcutsPanel={false}
-              isOutsideRange={(day) => !isInclusivelyAfterDay(day, moment())}
-            />
-          </div>
+        <div>
+          <Tab.Group>
+            <Tab.List className="flex space-x-1 overflow-x-auto">
+              {categories.map((item) => (
+                <Tab key={item} as={Fragment}>
+                  {({ selected }) => (
+                    <button
+                      className={`flex-shrink-0 block !leading-none font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full focus:outline-none ${
+                        selected
+                          ? "bg-secondary-900 text-secondary-50 "
+                          : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      } `}
+                    >
+                      {item}
+                    </button>
+                  )}
+                </Tab>
+              ))}
+            </Tab.List>
+            <Tab.Panels>
+              <Tab.Panel className="">
+                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                  {/* {DEMO_STAY_LISTINGS.filter((_, i) => i < 4).map((stay) => (
+                    <StayCard key={stay.id} data={stay} />
+                  ))} */}
+                   <span>Property Type: Apartment</span>
+                </div>
+                {/* <div className="flex mt-11 justify-center items-center">
+                  <ButtonSecondary>Show me more</ButtonSecondary>
+                </div> */}
+              </Tab.Panel>
+              <Tab.Panel className="">
+                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                  {/* {DEMO_EXPERIENCES_LISTINGS.filter((_, i) => i < 4).map(
+                    (stay) => (
+                      <ExperiencesCard key={stay.id} data={stay} />
+                    )
+                  )} */}
+                  <span>Property Type: Apartment</span>
+                </div>
+                {/* <div className="flex mt-11 justify-center items-center">
+                  <ButtonSecondary>Show me more</ButtonSecondary>
+                </div> */}
+              </Tab.Panel>
+              <Tab.Panel className="">
+                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                  <div>
+                    <span>hi</span>
+                  </div>
+                </div>
+                {/* <div className="flex mt-11 justify-center items-center">
+                  <ButtonSecondary>Show me more</ButtonSecondary>
+                </div> */}
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
         </div>
       </div>
     );
@@ -410,7 +461,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
 
         {/* host */}
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <Avatar
             hasChecked
             hasCheckedClass="w-4 h-4 -top-0.5 right-0.5"
@@ -427,7 +478,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               <span> 12 places</span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* desc */}
         <span className="block text-neutral-6000 dark:text-neutral-300">
@@ -501,15 +552,15 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     );
   };
 
-  const renderSection6 = () => {
-    return (
-      <div className="listingSection__wrap">
+  // const renderSection6 = () => {
+  //   return (
+  //     <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Reviews (23 reviews)</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        {/* <h2 className="text-2xl font-semibold">Reviews (23 reviews)</h2>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div> */}
 
         {/* Content */}
-        <div className="space-y-5">
+        {/* <div className="space-y-5">
           <FiveStartIconForRate iconClass="w-6 h-6" className="space-x-0.5" />
           <div className="relative">
             <Input
@@ -525,10 +576,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               <ArrowRightIcon className="w-5 h-5" />
             </ButtonCircle>
           </div>
-        </div>
+        </div> */}
 
         {/* comment */}
-        <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
+        {/* <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
           <CommentListing className="py-8" />
           <CommentListing className="py-8" />
           <CommentListing className="py-8" />
@@ -536,10 +587,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <div className="pt-8">
             <ButtonSecondary>View more 20 reviews</ButtonSecondary>
           </div>
-        </div>
-      </div>
-    );
-  };
+        </div> */}
+  //     </div>
+  //   );
+  // };
 
   const renderSection7 = () => {
     return (
@@ -593,10 +644,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             refund of the total amount paid (minus the service fee).
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
 
         {/* CONTENT */}
-        <div>
+        {/* <div>
           <h4 className="text-lg font-semibold">Check-in time</h4>
           <div className="mt-3 text-neutral-500 dark:text-neutral-400 max-w-md text-sm sm:text-base">
             <div className="flex space-x-10 justify-between p-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
@@ -608,7 +659,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               <span>02:00 pm - 04:00 pm</span>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
 
         {/* CONTENT */}
@@ -631,20 +682,30 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
 
   const renderSidebar = () => {
     return (
-      <div className="listingSectionSidebar__wrap shadow-xl">
+      <div className="listingSectionSidebar__wrap shadow-xl" style={{width: "385px"}} >
         {/* PRICE */}
         <div className="flex justify-between">
           <span className="text-3xl font-semibold">
-            $119
-            <span className="ml-1 text-base font-normal text-neutral-500 dark:text-neutral-400">
-              /night
-            </span>
+            Contact Property
+           
           </span>
-          <StartRating />
+          {/* <StartRating /> */}
         </div>
+
+        <div className="flex flex-col space-y-4">
+        {/* <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
+            <span style={{textAlign: "center"}}> Contact Property</span>
+            
+          </div> */}
+          <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
+            <span style={{textAlign: "center"}}> Learn more, take a tour, and get one step closer to your new home.</span>
+            
+          </div>
+          </div>
 
         {/* FORM */}
         <form className="flex flex-col border border-neutral-200 dark:border-neutral-700 rounded-3xl ">
+        
           <StayDatesRangeInput
             wrapClassName="divide-x divide-neutral-200 dark:divide-neutral-700 !grid-cols-1 sm:!grid-cols-2"
             onChange={(date) => setSelectedDate(date)}
@@ -654,7 +715,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             className="nc-ListingStayDetailPage__stayDatesRangeInput flex-1"
           />
           <div className="w-full border-b border-neutral-200 dark:border-neutral-700"></div>
-          <GuestsInput
+          {/* <GuestsInput
             className="nc-ListingStayDetailPage__guestsInput flex-1"
             fieldClassName="p-3"
             defaultValue={{
@@ -663,14 +724,19 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               guestInfants: 0,
             }}
             hasButtonSubmit={false}
-          />
+          /> */}
         </form>
 
         {/* SUM */}
         <div className="flex flex-col space-y-4">
+        {/* <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
+            <span style={{textAlign: "center"}}> Contact Property
+            Learn more, take a tour, and get one step closer to your new home.</span>
+            
+          </div> */}
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>$119 x 3 night</span>
-            <span>$357</span>
+            
+            <span>Let the property know when you're available, and they will contact you to arrange a tour.</span>
           </div>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
             <span>Service charge</span>
@@ -684,7 +750,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         </div>
 
         {/* SUBMIT */}
-        <ButtonPrimary href={"/checkout"}>Reserve</ButtonPrimary>
+        <ButtonPrimary href={"/checkout"}>Book</ButtonPrimary>
       </div>
     );
   };
@@ -771,10 +837,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           {renderSection1()}
           {renderSection2()}
           {renderSection3()}
-          {renderSection4()}
+          {/* {renderSection4()} */}
           {renderSectionCheckIndate()}
           {renderSection5()}
-          {renderSection6()}
+          {/* {renderSection6()} */}
           {renderSection7()}
           {renderSection8()}
         </div>
@@ -789,10 +855,10 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       {!isPreviewMode && <MobileFooterSticky />}
 
       {/* OTHER SECTION */}
-      {!isPreviewMode && (
-        <div className="container py-24 lg:py-32">
+      {/* {!isPreviewMode && (
+        <div className="container py-24 lg:py-32"> */}
           {/* SECTION 1 */}
-          <div className="relative py-16">
+          {/* <div className="relative py-16">
             <BackgroundSection />
             <SectionSliderNewCategories
               heading="Explore by types of stays"
@@ -802,12 +868,12 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               sliderStyle="style2"
               uniqueClassName={"ListingStayDetailPage1"}
             />
-          </div>
+          </div> */}
 
           {/* SECTION */}
-          <SectionSubscribe2 className="pt-24 lg:pt-32" />
-        </div>
-      )}
+          {/* <SectionSubscribe2 className="pt-24 lg:pt-32" /> */}
+        {/* </div> */}
+      {/* )} */}
     </div>
   );
 };
