@@ -77,7 +77,7 @@ const StaySearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4  `}
             onClick={() => setFieldNameShow("dates")}
           >
-            <span className="text-neutral-400">When</span>
+            <span className="text-neutral-400">Move In</span>
             <span>{dateSelected || "Add date"}</span>
           </button>
         ) : (
@@ -116,8 +116,8 @@ const StaySearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("beds")}
           >
-            <span className="text-neutral-400">Who</span>
-            <span>{guestSelected || `Add guests`}</span>
+            <span className="text-neutral-400">Beds</span>
+            <span>{guestSelected || `Add Beds`}</span>
           </button>
         ) : (
           <GuestsInput defaultValue={guestInput} onChange={setGuestInput} />

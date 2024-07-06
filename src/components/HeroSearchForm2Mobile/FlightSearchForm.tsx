@@ -117,7 +117,7 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4  `}
             onClick={() => setFieldNameShow("dates")}
           >
-            <span className="text-neutral-400">When</span>
+            <span className="text-neutral-400">Move In</span>
             <span>{dateSelected || "Add date"}</span>
           </button>
         ) : (
@@ -259,15 +259,15 @@ const FlightSearchForm = () => {
   return (
     <div>
       <div className="w-full space-y-5">
-        {renderInputLocationPickup()}
+        {/* {renderInputLocationPickup()} */}
         {/*  */}
-        {renderInputLocationDropoff()}
+        {/* {renderInputLocationDropoff()} */}
         {/*  */}
-        {renderGenerals()}
+        {/* {renderGenerals()} */}
         {/*  */}
-        {renderInputDates()}
+        {/* {renderInputDates()} */}
         {/*  */}
-        {renderInputGuests()}
+        {/* {renderInputGuests()} */}
       </div>
     </div>
   );

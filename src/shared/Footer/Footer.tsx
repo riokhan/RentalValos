@@ -12,48 +12,49 @@ export interface WidgetFooterMenu {
 const widgetMenus: WidgetFooterMenu[] = [
   {
     id: "5",
-    title: "Getting started",
+    title: "Popular City Searches",
     menus: [
-      { href: "#", label: "Installation" },
-      { href: "#", label: "Release Notes" },
-      { href: "#", label: "Upgrade Guide" },
-      { href: "#", label: "Browser Support" },
-      { href: "#", label: "Editor Support" },
+      { href: "#", label: "New York" },
+      { href: "#", label: "Miami" },
+      { href: "#", label: "Washington" },
+      { href: "#", label: "Sydney" },
+      { href: "#", label: "London" },
     ],
+
   },
   {
     id: "1",
-    title: "Explore",
+    title: "Popular Lifestyles",
     menus: [
-      { href: "#", label: "Design features" },
-      { href: "#", label: "Prototyping" },
-      { href: "#", label: "Design systems" },
-      { href: "#", label: "Pricing" },
-      { href: "#", label: "Security" },
+      { href: "#", label: "Waterfront" },
+      { href: "#", label: "Metropolitan" },
+      { href: "#", label: "Country Living" },
+      { href: "#", label: "Historic" },
+      { href: "#", label: "Ski" },
     ],
   },
   {
     id: "2",
-    title: "Resources",
+    title: "Popular Destinations",
     menus: [
-      { href: "#", label: "Best practices" },
-      { href: "#", label: "Support" },
-      { href: "#", label: "Developers" },
-      { href: "#", label: "Learn design" },
-      { href: "#", label: "Releases" },
+      { href: "#", label: "Africa" },
+      { href: "#", label: "Canada" },
+      { href: "#", label: "Asia" },
+      { href: "#", label: "Europe" },
+      { href: "#", label: "Caribbean" },
     ],
   },
-  {
-    id: "4",
-    title: "Community",
-    menus: [
-      { href: "#", label: "Discussion Forums" },
-      { href: "#", label: "Code of Conduct" },
-      { href: "#", label: "Community Resources" },
-      { href: "#", label: "Contributing" },
-      { href: "#", label: "Concurrent Mode" },
-    ],
-  },
+  // {
+  //   id: "4",
+  //   title: "Community",
+  //   menus: [
+  //     { href: "#", label: "Discussion Forums" },
+  //     { href: "#", label: "Code of Conduct" },
+  //     { href: "#", label: "Community Resources" },
+  //     { href: "#", label: "Contributing" },
+  //     { href: "#", label: "Concurrent Mode" },
+  //   ],
+  // },
 ];
 
 const Footer: React.FC = () => {

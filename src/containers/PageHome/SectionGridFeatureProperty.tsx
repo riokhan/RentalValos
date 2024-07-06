@@ -20,10 +20,12 @@ export interface SectionGridFeaturePropertyProps {
 const SectionGridFeatureProperty: FC<SectionGridFeaturePropertyProps> = ({
   stayListings = DEMO_DATA,
   gridClass = "",
-  heading = "Featured places to stay",
-  subHeading = "Popular places to stay that Chisfis recommends for you",
+  heading = "Featured Homes for Rent",
+  subHeading = "Explore our top rental homes, selected for their quality and amenities.",
   headingIsCenter,
+
   tabs = ["New York", "Washington, D.C.", "Paris", "London"],
+
 }) => {
   const renderCard = (stay: StayDataType, index: number) => {
     return <PropertyCardH key={index} className="h-full" data={stay} />;

@@ -6,6 +6,7 @@ import SectionHowItWork from "components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "components/BackgroundSection/BackgroundSection";
 import { TaxonomyType } from "data/types";
 import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox";
+import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox";
 import SectionHero2 from "components/SectionHero2/SectionHero2";
 //
 import logo1 from "images/logos/nomal/1.png";
@@ -97,7 +98,6 @@ function PageHome2() {
     <div className="nc-PageHome2 relative overflow-hidden">
       {/* GLASSMOPHIN */}
       {/* <BgGlassmorphism /> */}
-
       <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
         <SectionHero2 className="" />
 
@@ -185,14 +185,15 @@ function PageHome2() {
 
         {/* SECTION 1 */}
         
-        <SectionSliderNewCategories
+        {/* <SectionSliderNewCategories
           heading="Explore by types of stays"
           subHeading="Explore houses based on 10 types of stays"
           categoryCardType="card5"
           itemPerRow={5}
           uniqueClassName="PageHome2_s2"
-        />
-
+        /> */}
+         {/* SECTION */}
+         <SectionGridCategoryBox />
         {/* SECTION */}
         {/* <SectionSubscribe2 /> */}
       </div>

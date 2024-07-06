@@ -10,7 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import { PathName } from "routers/types";
 
-export type SiteHeaders = "Header 1" | "Header 2" | "Header 3";
+export type SiteHeaders = "Header 3" | "Header 2" | "Header 1";
 
 interface HomePageItem {
   name: string;
@@ -34,7 +34,7 @@ const SiteHeader = () => {
   const anchorRef = React.useRef<HTMLDivElement>(null);
 
   let [headers] = React.useState<SiteHeaders[]>([
-    "Header 1",
+    "Header 3",
     "Header 2",
     "Header 3",
   ]);
@@ -54,7 +54,7 @@ const SiteHeader = () => {
     },
   ]);
   const [headerSelected, setHeaderSelected] =
-    React.useState<SiteHeaders>("Header 1");
+    React.useState<SiteHeaders>("Header 3");
 
   const [isTopOfPage, setIsTopOfPage] = React.useState(window.pageYOffset < 5);
   const location = useLocation();
@@ -139,7 +139,7 @@ const SiteHeader = () => {
     return (
       <div className="relative z-40 hidden lg:block">
         <div className="fixed right-3 top-1/4 z-40 flex items-center">
-          <Popover className="relative">
+          {/* <Popover className="relative">
             {({ open }) => (
               <>
                 <Popover.Button
@@ -184,7 +184,7 @@ const SiteHeader = () => {
                 </Transition>
               </>
             )}
-          </Popover>
+          </Popover> */}
         </div>
       </div>
     );
@@ -199,7 +199,8 @@ const SiteHeader = () => {
     }
     switch (headerSelected) {
       case "Header 1":
-        return <Header className={headerClassName} navType="MainNav1" />;
+        return <Header3 className={headerClassName} />;
+        // <Header className={headerClassName} navType="MainNav1" />;
       case "Header 2":
         return <Header className={headerClassName} navType="MainNav2" />;
       case "Header 3":
