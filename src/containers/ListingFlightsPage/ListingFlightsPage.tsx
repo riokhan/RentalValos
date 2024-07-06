@@ -96,7 +96,7 @@ const ListingFlightsPage: FC<ListingFlightsPageProps> = ({
 
         {/* SECTION 1 */}
         <SectionSliderNewCategories
-          heading="Explore top destination ✈"
+          heading="Explore our popular stays"
           subHeading="Explore thousands of destinations around the world"
           categoryCardType="card4"
           itemPerRow={4}

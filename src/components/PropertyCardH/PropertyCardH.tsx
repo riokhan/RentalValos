@@ -43,9 +43,9 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
           href={href}
         />
 
-        {saleOff && (
+        {/* {saleOff && (
           <SaleOffBadge className="absolute left-5 top-5 !bg-orange-500" />
-        )}
+        )} */}
       </div>
     );
   };
@@ -93,8 +93,9 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
             <Badge
               name={
                 <div className="flex items-center">
-                  <i className="text-sm las la-share-alt"></i>
-                  <span className="ml-1">5 Network</span>
+                  {/* <i className="text-sm las la-share-alt"></i> */}
+                  <i className="text-sm las la-car"></i>
+                  <span className="ml-1">20 min ago</span>
                 </div>
               }
             />
@@ -102,14 +103,14 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
               name={
                 <div className="flex items-center">
                   <i className="text-sm las la-user-friends"></i>
-                  <span className="ml-1">Family</span>
+                  <span className="ml-1">5 Persons</span>
                 </div>
               }
               color="yellow"
             />
           </div>
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
+            {/* {isAds && <Badge name="ADS" color="green" />} */}
             <h2 className="text-lg font-medium capitalize">
               <span className="line-clamp-2">{title}</span>
             </h2>

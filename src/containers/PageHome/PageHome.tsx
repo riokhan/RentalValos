@@ -54,7 +54,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "2",
     href: "/listing-stay",
-    name: "Tokyo",
+    name: "Washington, D.C.",
     taxonomy: "category",
     count: 188288,
     thumbnail:

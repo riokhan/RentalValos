@@ -99,7 +99,7 @@ const ListingCarPage: FC<ListingCarPageProps> = ({ className = "" }) => {
         <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderNewCategories
-            heading="Explore top destination ✈"
+            heading="Explore our popular stays"
             subHeading="Explore thousands of destinations around the world"
             categoryCardType="card4"
             itemPerRow={4}

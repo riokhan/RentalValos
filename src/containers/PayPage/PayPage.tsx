@@ -29,7 +29,9 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
             <div className="pt-5  sm:pb-5 sm:px-5 space-y-3">
               <div>
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
+
                 Room in  New Jersey, United States 
+
                 </span>
                 <span className="text-base sm:text-lg font-medium mt-1 block">
                 Victor Street Saddle Brook
