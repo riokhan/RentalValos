@@ -68,7 +68,7 @@ const DEMO_CATS: TaxonomyType[] = [
   },
   {
     id: "6",
-    href: "/listing-real-estate-map",
+    href: "/listing-stay",
     name: "Dome House",
     taxonomy: "category",
     count: 188288,
