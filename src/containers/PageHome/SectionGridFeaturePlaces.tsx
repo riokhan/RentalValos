@@ -21,8 +21,8 @@ export interface SectionGridFeaturePlacesProps {
 const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
   stayListings = DEMO_DATA,
   gridClass = "",
-  heading = "Featured places to stay",
-  subHeading = "Popular places to stay that Chisfis recommends for you",
+  heading = "Featured Homes for Rent",
+  subHeading = "Explore our top rental homes, selected for their quality and amenities.",
   headingIsCenter,
   tabs = ["New York", "Tokyo", "Paris", "London"],
 }) => {
