@@ -11,7 +11,7 @@ export interface DateRage {
   endDate: moment.Moment | null;
 }
 
-export type StaySearchFormFields = "location" | "guests" | "dates";
+export type StaySearchFormFields = "location" | "beds" | "dates";
 
 export interface StaySearchFormProps {
   haveDefaultValue?: boolean;
@@ -88,7 +88,7 @@ const StaySearchForm: FC<StaySearchFormProps> = ({
           defaultValue={guestValue}
           onChange={(data) => setGuestValue(data)}
           className="flex-[1.2]"
-          autoFocus={defaultFieldFocus === "guests"}
+          autoFocus={defaultFieldFocus === "beds"}
           submitLink="/listing-stay"
         />
       </form>

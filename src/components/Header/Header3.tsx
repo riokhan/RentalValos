@@ -24,12 +24,12 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
   const [showHeroSearch, setShowHeroSearch] =
     useState<StaySearchFormFields | null>();
   //
-  const [currentTab, setCurrentTab] = useState<SearchTab>("Stays");
+  const [currentTab, setCurrentTab] = useState<SearchTab>("Rental House");
 
   //
   useOutsideAlerter(headerInnerRef, () => {
     setShowHeroSearch(null);
-    setCurrentTab("Stays");
+    setCurrentTab("Rental House");
   });
 
   let location = useLocation();
@@ -110,16 +110,16 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             onClick={() => setShowHeroSearch("dates")}
             className="block px-4 cursor-pointer py-3 "
           >
-            Check In
+            Move In
           </span>
           <span className="h-5 w-[1px] bg-neutral-300 dark:bg-neutral-700"></span>
           <span
             onClick={() => {
-              setShowHeroSearch("guests");
+              setShowHeroSearch("beds");
             }}
             className="block px-4 cursor-pointer font-normal py-3"
           >
-            Add guests
+            Beds
           </span>
         </div>
 
@@ -157,7 +157,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
           ${showHeroSearch ? "duration-75" : ""} 
           ${
             showHeroSearch
-              ? currentTab === "Cars" || currentTab === "Flights"
+              ? currentTab === "Rental House" || currentTab === "Rental House"
                 ? "scale-y-[4.4]"
                 : "scale-y-[3.4]"
               : ""
@@ -183,14 +183,14 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             {/* NAV */}
             <div className="hidden md:flex relative z-10 flex-1 items-center justify-end text-neutral-700 dark:text-neutral-100">
               <div className="items-center flex space-x-1">
-                <Link
+                {/* <Link
                   to="/add-listing-1"
                   className="
                 hidden xl:inline-flex text-opacity-90
                 group px-4 py-2 border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 rounded-full items-center text-sm text-gray-700 dark:text-neutral-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                 >
                   List your property
-                </Link>
+                </Link> */}
 
                 <div></div>
                 <SwitchDarkMode />

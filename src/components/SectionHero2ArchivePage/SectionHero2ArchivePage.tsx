@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import imagePng from "images/1.jpeg";
 import HeroRealEstateSearchForm from "components/HeroSearchForm/HeroRealEstateSearchForm";
 
+
 export interface SectionHero2ArchivePageProps {
   className?: string;
   children?: React.ReactNode;
@@ -39,9 +40,9 @@ const SectionHero2ArchivePage: FC<SectionHero2ArchivePageProps> = ({
             </div>
           </div>
         </div>
-        <div className="hidden lg:block mt-10 w-full">
+        {/* <div className="hidden lg:block mt-10 w-full">
           <HeroRealEstateSearchForm />
-        </div>
+        </div> */}
       </div>
     </div>
   );

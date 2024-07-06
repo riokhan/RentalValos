@@ -25,6 +25,7 @@ const LogoSvg = () => {
         fill="#1F2937"
       />
     </svg>
+    
   );
 };
 

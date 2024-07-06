@@ -100,7 +100,7 @@ function PageHome3() {
         {/* SECTION */}
         <div className="relative py-16">
           <BackgroundSection />
-          <SectionGridAuthorBox boxCard="box2" />
+          {/* <SectionGridAuthorBox boxCard="box2" /> */}
         </div>
 
         {/* SECTION */}
