@@ -48,10 +48,10 @@ import useWindowSize from "hooks/useWindowResize";
 import PageHome3 from "containers/PageHome/PageHome3";
 
 export const pages: Page[] = [
-  { path: "/", exact: true, component: PageHome },
-  { path: "/#", exact: true, component: PageHome },
-  { path: "/home-1-header-2", exact: true, component: PageHome },
-  { path: "/home-2", component: PageHome2 },
+  { path: "/", exact: true, component: PageHome2 },
+  { path: "/#", exact: true, component: PageHome2 },
+  { path: "/home-1-header-2", exact: true, component: PageHome2 },
+  { path: "/home-2", component: PageHome },
   { path: "/home-3", component: PageHome3 },
   //
   { path: "/listing-stay", component: ListingStayPage },

@@ -70,7 +70,7 @@ const SiteHeader = () => {
       setHeaderSelected("Header 2");
     }
     if (location.pathname === "/") {
-      setHeaderSelected("Header 1");
+      setHeaderSelected("Header 3");
     }
 
     // disconnect the observer
@@ -213,7 +213,7 @@ const SiteHeader = () => {
   return (
     <>
       <Helmet>
-        <title>Chisfis || Booking React Template</title>
+        <title>ValoTeam</title>
       </Helmet>
       {renderControlSelections()}
       {renderHeader()}
