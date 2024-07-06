@@ -139,7 +139,7 @@ const SiteHeader = () => {
     return (
       <div className="relative z-40 hidden lg:block">
         <div className="fixed right-3 top-1/4 z-40 flex items-center">
-          <Popover className="relative">
+          {/* <Popover className="relative">
             {({ open }) => (
               <>
                 <Popover.Button
@@ -184,7 +184,7 @@ const SiteHeader = () => {
                 </Transition>
               </>
             )}
-          </Popover>
+          </Popover> */}
         </div>
       </div>
     );
