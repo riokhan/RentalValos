@@ -16,7 +16,7 @@ export interface StaySearchFormProps {
 }
 
 // DEFAULT DATA FOR ARCHIVE PAGE
-const defaultLocationValue = "Washington, D.C., United States";
+const defaultLocationValue = "Washington, D.C., US";
 const defaultDateRange = {
   startDate: moment(),
   endDate: moment().add(4, "days"),

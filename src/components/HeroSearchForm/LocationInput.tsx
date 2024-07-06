@@ -78,7 +78,7 @@ const LocationInput: FC<LocationInputProps> = ({
         <div className="mt-2">
           {[
             "Hamptons, Suffolk County, NY",
-            "Las Vegas, NV, United States",
+            "Las Vegas, NV, US",
             "Ueno, Taito, Washington, D.C.",
             "Ikebukuro, Toshima, Washington, D.C.",
           ].map((item) => (

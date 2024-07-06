@@ -30,7 +30,7 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
               <div>
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
 
-                Room in  New Jersey, United States 
+                Room in  New Jersey, US 
 
                 </span>
                 <span className="text-base sm:text-lg font-medium mt-1 block">

@@ -28,7 +28,7 @@ interface Props {
 const LocationInputFrom: FC<Props> = ({
   onChange = (value) => {},
   className = "nc-flex-1.5",
-  defaultValue = "United States",
+  defaultValue = "US",
 }) => {
   const [value, setValue] = useState("");
 

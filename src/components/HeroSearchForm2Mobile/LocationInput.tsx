@@ -12,7 +12,7 @@ interface Props {
 const LocationInput: FC<Props> = ({
   onChange = () => {},
   className = "",
-  defaultValue = "United States",
+  defaultValue = "US",
   headingText = "Location",
 }) => {
   const [value, setValue] = useState("");

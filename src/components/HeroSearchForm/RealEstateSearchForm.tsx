@@ -10,7 +10,7 @@ export interface RealEstateSearchFormProps {
 }
 
 // DEFAULT DATA FOR ARCHIVE PAGE
-const defaultLocationValue = "Washington, D.C., United States";
+const defaultLocationValue = "Washington, D.C., US";
 const defaultPropertyType: PropertyType[] = [
   {
     name: "Duplex House",

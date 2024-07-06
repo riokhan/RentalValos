@@ -102,7 +102,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Washington, D.C., United States</span>
+            <span className="ml-1"> Washington, D.C., US</span>
           </span>
         </div>
 
@@ -395,7 +395,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
         <div>
           <h2 className="text-2xl font-semibold">Location</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
+            San Diego, CA, US of America (SAN-San Diego Intl.)
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />

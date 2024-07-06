@@ -145,7 +145,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-        504 Victor Street Saddle Brook, New Jersey, 07663 United States
+        504 Victor Street Saddle Brook, New Jersey, 07663 US
         </h2>
 
         {/* 3 */}
@@ -613,7 +613,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         <div>
           <h2 className="text-2xl font-semibold">Location</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
+            San Diego, CA, US of America (SAN-San Diego Intl.)
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />

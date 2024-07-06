@@ -1,13 +1,16 @@
 import React, { FC } from "react";
 import imagePng from "images/hero-right-3.png";
 //import HeroRealEstateSearchForm from "components/HeroSearchForm/HeroRealEstateSearchForm";
-
+import ButtonPrimary from "shared/Button/ButtonPrimary";
+import ButtonSecondary from "shared/Button/ButtonSecondary";
+import { Link } from "react-router-dom";
 export interface SectionHero2Props {
   className?: string;
   children?: React.ReactNode;
 }
 
 const SectionHero2: FC<SectionHero2Props> = ({ className = "", children }) => {
+  
   return (
     <div
       className={`nc-SectionHero2 relative ${className}`}
@@ -30,13 +33,21 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "", children }) => {
               <h2 className="font-semibold text-4xl md:text-5xl xl:text-7xl !leading-[110%]">
                 Renting Made <br />Quick & Simple.
               </h2>
+              
             )}
+            <div><Link to="/listing-real-estate-map">
+    <ButtonSecondary>Find My Room</ButtonSecondary></Link>
+    </div>
           </div>
         </div>
+        
         {/* <div className="hidden lg:block lg:mt-20 w-full">
           <HeroRealEstateSearchForm />
         </div> */}
       </div>
+      
+    
+    
     </div>
   );
 };
