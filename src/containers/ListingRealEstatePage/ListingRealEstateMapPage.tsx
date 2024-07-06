@@ -33,7 +33,7 @@ const ListingRealEstateMapPage: FC<ListingRealEstateMapPageProps> = ({
     >
       <Helmet>
         {/* <title>Chisfis || Booking React Template</title> */}
-        <title>Chisfis || List Of Booking</title>
+        <title>ValoTeam</title>
       </Helmet>
 
       {/* SECTION HERO */}

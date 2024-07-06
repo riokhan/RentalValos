@@ -8,7 +8,7 @@ const PAGES_REAL_ESTATE: PathName[] = [
   "/home-2",
   "/listing-real-estate",
   "/listing-real-estate-detail",
-  "/listing-real-estate-map",
+  "/listing-stay",
 ];
 
 const HeroSearchForm2MobileFactory = () => {

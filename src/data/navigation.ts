@@ -278,7 +278,7 @@ export const NAVIGATION_DEMO: NavItemType[] = [
           },
           {
             id: ncNanoId(),
-            href: "/listing-real-estate-map",
+            href: "/listing-stay",
             name: "Real Estate Maps",
             isNew: true,
           },
