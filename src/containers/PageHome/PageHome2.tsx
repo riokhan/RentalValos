@@ -38,7 +38,7 @@ import SectionDowloadApp from "./SectionDowloadApp";
 const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "1",
-    href: "/listing-stay",
+    href: "/listing-real-estate-map",
     name: "Luxury Living",
     taxonomy: "category",
     count: 500,
@@ -47,7 +47,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "222",
-    href: "/listing-stay",
+    href: "/listing-real-estate-map",
     name: "Family Homes",
     taxonomy: "category",
     count: 1007,
@@ -56,7 +56,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "3",
-    href: "/listing-stay",
+    href: "/listing-real-estate-map",
     name: "Modern Apartments",
     taxonomy: "category",
     count: 6654,
@@ -65,7 +65,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "4",
-    href: "/listing-stay",
+    href: "/listing-real-estate-map",
     name: "Cozy Studios",
     taxonomy: "category",
     count: 543,
@@ -74,7 +74,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   },
   {
     id: "5",
-    href: "/listing-stay",
+    href: "/listing-real-estate-map",
     name: "Smart Eco-Friendly Home",
     taxonomy: "category",
     count: 236,
